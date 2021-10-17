@@ -65,4 +65,15 @@ public class Analysis {
 			distribution[i]++;
 		}
 	}
+	
+	public void showAna() {
+		System.out.println("max:"+max+", min:"+min+", avg:"+avg+", standard deviation:"+SD);
+		System.out.println("distribution"+"          interval:"+interval);
+		for(int i = 0; i < distribution.length; i++) {
+			if(i != distribution.length-1)
+				System.out.println(i*interval+"~"+(i * (interval + 1) - 1)+":"+distribution[i]);
+			else
+				System.out.println("above "+i*interval+":"+distribution[i]);
+		}
+	}
 }
