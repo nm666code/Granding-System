@@ -25,21 +25,21 @@ public class Student {
 		avg = Math.round(avg*100.0)/100.0;
 		System.out.println(
 				"no="+id+", name="+name+", chin="+chin+rating(chin)+", math="+math+rating(math)
-				+", AVG¥­§¡="+avg+rating((int)avg)+", ¦W¦¸="+rank
+				+", AVGå¹³å‡="+avg+rating((int)avg)+", åæ¬¡="+rank
 				);
 	}
 
 	public String rating(int score) {
 		if(score>= 90)
-			return "(Àu)";
+			return "(å„ª)";
 		else if(score >= 80)
-			return "(¥Ò)";
+			return "(ç”²)";
 		else if(score >= 70)
-			return "(¤A)";
+			return "(ä¹™)";
 		else if(score >= 60)
-			return "(¤ş)";
+			return "(ä¸™)";
 		else
-			return "(¤B)";
+			return "(ä¸)";
 	}
 	
 	public int getId() {

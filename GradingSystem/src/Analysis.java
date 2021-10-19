@@ -6,7 +6,7 @@ public class Analysis {
 	private int min;
 	private double avg;
 	private double SD;
-	private int interval;
+	private int interval = 10;
 	private int[] distribution;
 	
 	

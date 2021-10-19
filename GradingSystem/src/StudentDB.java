@@ -22,6 +22,15 @@ public class StudentDB {
 		StudentDB.students = students;
 	}
 	
+	public static void ranking() {
+		int i = students.size();
+		Sort.quickSort(students, new AvgComparator());
+		for(Student s:students) {
+			s.setRank(i);
+			i--;
+		}
+	}
+	
 	public static void writeOutDB(String fileName) {
 		File file = new File(fileName);
 		try (PrintWriter output = new PrintWriter(file);){
@@ -52,10 +61,10 @@ public class StudentDB {
 			}
 			input.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		students = tempDB;
+		ranking();
 	}
 	
 	public static void showStudents() {

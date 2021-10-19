@@ -6,7 +6,7 @@ public class BinarySearch {
 	    if (start > end)
 	        return -1;
 
-	    int mid = start + (end - start)/2;    //¨¾¤î·¸¦ì
+	    int mid = start + (end - start)/2;
 	    if (students.get(mid).getId() > ID)
 	        return binarySearchID(students, start, mid - 1, ID);
 	    if (students.get(mid).getId() < ID)
@@ -19,7 +19,7 @@ public class BinarySearch {
 	    if (start > end)
 	        return -1;
 
-	    int mid = start + (end - start)/2;    //¨¾¤î·¸¦ì
+	    int mid = start + (end - start)/2;
 	    if (students.get(mid).getName().compareTo(name) > 0)
 	        return binarySearchName(students, start, mid - 1, name);
 	    if (students.get(mid).getName().compareTo(name) < 0)
